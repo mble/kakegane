@@ -16,7 +16,7 @@ module Kakegane
     context '#count_down' do
       it 'decreases latch count when called' do
         latch = CountdownLatch.new 4
-        expect { latch.count_down }.to change{ latch.count}.from(4).to 3
+        expect { latch.count_down }.to change { latch.count }.from(4).to 3
       end
 
       it 'does not reduce latch count below zero' do
