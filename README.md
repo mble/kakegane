@@ -3,7 +3,10 @@
 ![](https://travis-ci.org/mble/kakegane.svg?branch=master)
 [![Inline 
 docs](http://inch-ci.org/github/mble/kakegane.svg?branch=master)](http://inch-ci.org/github/mble/kakegane)
-
+[![Coverage 
+Status](https://coveralls.io/repos/github/mble/kakegane/badge.svg?branch=master)](https://coveralls.io/github/mble/kakegane?branch=master)
+[![Code 
+Climate](https://codeclimate.com/github/mble/kakegane/badges/gpa.svg)](https://codeclimate.com/github/mble/kakegane)
 
 Naive implementation of a countdown latch, based on the Java 
 implementation.
