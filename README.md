@@ -1,5 +1,10 @@
 # Kakegane
 
+![](https://travis-ci.org/mble/kakegane.svg?branch=master)
+[![Inline 
+docs](http://inch-ci.org/github/mble/kakegane.svg?branch=master)](http://inch-ci.org/github/mble/kakegane)
+
+
 Naive implementation of a countdown latch, based on the Java 
 implementation.
 
