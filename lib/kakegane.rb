@@ -1,32 +1,7 @@
 require 'kakegane/version'
-require 'thread'
-require 'timeout'
-
+require 'kakegane/countdown_latch'
 module Kakegane
-  class CountdownLatch
-
-    def initialize(count)
-      raise ArgumentError unless count.is_a?(Fixnum) && count >= 0
-      @count = count
-      @mutex = Mutex.new
-      @condition = ConditionVariable.new
-    end
-
-    def count_down
-      @mutex.synchronize do
-        @condition.signal if @count.zero?
-        @count -= 1 if @count > 0
-      end
-    end
-
-    def count
-      @mutex.synchronize { @count }
-    end
-
-    def wait
-      @mutex.synchronize do
-        @condition.wait @mutex if @count > 0
-      end
-    end
+  def self.latch(count)
+    Kakegane::CountdownLatch.new count
   end
 end
